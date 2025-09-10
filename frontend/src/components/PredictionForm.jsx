@@ -154,7 +154,7 @@ const handleSubmit = async (e) => {
   setIsLoading(true);
 
   try {
-    const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/predict`;
+    const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api/predict`;
 
     let payload = formData;
 

@@ -62,7 +62,7 @@ const Chatbot = () => {
   setIsLoading(true);
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/chat`, {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: content.trim() }),
