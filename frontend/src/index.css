@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CURA Medical App Design System - Professional Healthcare UI */
+
+@layer base {
+  :root {
+    /* Core Background */
+    --background: 0 0% 99%;
+    --foreground: 220 15% 15%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    /* Popover System */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Primary - Medical Reddish Orange */
+    --primary: 16 100% 55%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 16 100% 65%;
+
+    /* Secondary - Professional Blue-Gray */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 15% 25%;
+
+    /* Muted - Subtle Medical Gray */
+    --muted: 210 15% 95%;
+    --muted-foreground: 220 10% 50%;
+
+    /* Accent - Soft Medical Teal */
+    --accent: 180 25% 92%;
+    --accent-foreground: 180 30% 25%;
+
+    /* Medical Alert Colors */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 135 60% 45%;
+    --success-foreground: 0 0% 98%;
+    --warning: 45 90% 55%;
+    --warning-foreground: 45 90% 10%;
+
+    /* Interface Elements */
+    --border: 210 15% 88%;
+    --input: 210 15% 92%;
+    --ring: 16 100% 55%;
+
+    /* Medical Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-medical: linear-gradient(180deg, hsl(210 25% 98%), hsl(210 15% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(16 100% 55%), hsl(16 80% 65%));
+
+    /* Professional Shadows */
+    --shadow-medical: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 2px 10px -2px hsl(220 15% 15% / 0.08);
+    --shadow-elevated: 0 8px 30px -8px hsl(220 15% 15% / 0.12);
+
+    /* Spacing & Layout */
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Professional Medical Dark Theme */
+    --background: 220 15% 8%;
+    --foreground: 210 15% 92%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 210 15% 92%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 210 15% 92%;
+
+    /* Primary remains consistent - medical orange */
+    --primary: 16 90% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 16 90% 70%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 210 15% 85%;
+
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 180 20% 15%;
+    --accent-foreground: 180 25% 85%;
+
+    /* Dark Mode Medical Alerts */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 135 50% 50%;
+    --success-foreground: 0 0% 98%;
+    --warning: 45 80% 60%;
+    --warning-foreground: 45 80% 15%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 15%;
+    --ring: 16 90% 60%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-medical: linear-gradient(180deg, hsl(220 15% 10%), hsl(220 15% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(16 90% 60%), hsl(16 70% 70%));
+
+    /* Dark Mode Shadows */
+    --shadow-medical: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 10px -2px hsl(0 0% 0% / 0.2);
+    --shadow-elevated: 0 8px 30px -8px hsl(0 0% 0% / 0.25);
+  }
+}
+
+/* Medical UI Utilities */
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-medical {
+    background: var(--gradient-medical);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-medical {
+    box-shadow: var(--shadow-medical);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .medical-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .medical-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevated);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
