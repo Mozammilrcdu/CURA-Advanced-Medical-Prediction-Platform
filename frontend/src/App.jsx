@@ -4,13 +4,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/context/ThemeContext";
-import Layout from "@/components/Layout.jsx";
-import Home from "@/pages/Home.jsx";
-import About from "@/pages/About.jsx";
-import Prediction from "@/pages/Prediction.jsx";
-import Chatbot from "@/pages/Chatbot.jsx";
-import HelpfulAdvice from "@/pages/HelpfulAdvice.jsx";
-import NotFound from "@/pages/NotFound.jsx";
+import Layout from "@/components/Layout";
+import Home from "@/Pages/Home";
+import About from "@/Pages/About";
+import Prediction from "@/Pages/Prediction";
+import Chatbot from "@/Pages/Chatbot";
+import HelpfulAdvice from "@/Pages/HelpfulAdvice";
+import NotFound from "@/Pages/NotFound";
 
 const queryClient = new QueryClient();
 
